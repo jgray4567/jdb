@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<!-- Handled by Exflow.site --><html data-wf-site="6222e4c942e0ed16332da855" data-wf-status="1"><head><meta charset="utf-8"/><link href="https://cdn.prod.website-files.com" rel="preconnect"/><title>JDB Entertainment Global - Front Story</title><meta content="JDB Entertainment Global - Front Story" property="og:title"/><meta content="JDB Entertainment Global - Front Story" property="twitter:title"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="css/webflow-style.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({google:{families:["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]}});</script><link href="images/favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="images/app-icon.png" rel="apple-touch-icon"/>
+<style>
+.bn-bar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#fff;border-bottom:1px solid #0000001a;min-height:80px;display:flex;align-items:center;}
+.bn-inner{display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 48px;}
+.bn-logo{display:flex;align-items:center;text-decoration:none;}
+.bn-logo-img{width:100px;max-width:100px;display:block;}
+.bn-menu{display:flex;flex-direction:row;align-items:center;margin:0;padding:0;list-style:none;}
+.bn-link{color:#333;font-family:Montserrat,sans-serif;font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;margin-right:30px;border-bottom:2px solid transparent;padding-bottom:2px;white-space:nowrap;transition:border-color 0.2s;}
+.bn-link:last-child{margin-right:0;}
+.bn-link:hover,.bn-link[aria-current="page"]{border-bottom-color:#197fd8;}
+.bn-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;width:40px;height:40px;background:#fff;border:none;border-radius:2px;cursor:pointer;padding:0;flex-shrink:0;}
+.bn-bar1,.bn-bar2,.bn-bar3{display:block;width:25px;height:2px;background:#222;border-radius:1px;transition:transform 0.25s,opacity 0.25s;}
+.bn-bar1{margin-bottom:6px;}.bn-bar3{margin-top:6px;}
+.bn-toggle[aria-expanded="true"] .bn-bar1{transform:translateY(8px) rotate(45deg);}
+.bn-toggle[aria-expanded="true"] .bn-bar2{opacity:0;}
+.bn-toggle[aria-expanded="true"] .bn-bar3{transform:translateY(-8px) rotate(-45deg);}
+/* Dropdown */
+.bn-item{position:relative;display:flex;align-items:center;margin-right:30px;}
+.bn-item>.bn-link{margin-right:0;}
+.bn-caret{font-size:9px;transition:transform 0.2s;display:inline-block;margin-left:4px;opacity:0.7;}
+.bn-dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #0000001a;border-radius:4px;min-width:180px;z-index:10000;box-shadow:0 4px 20px rgba(0,0,0,0.12);padding:10px 0;}
+.bn-item:hover>.bn-dropdown,.bn-item.bn-open>.bn-dropdown{display:block;}
+.bn-item:hover>.bn-link>.bn-caret,.bn-item.bn-open>.bn-link>.bn-caret{transform:rotate(180deg);opacity:1;}
+.bn-dropdown-link{display:block;color:#333;font-family:Montserrat,sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;padding:10px 20px;white-space:nowrap;transition:background 0.15s,color 0.15s;}
+.bn-dropdown-link:hover{background:#f5f5f5;color:#197fd8;}
+.bn-dropdown-link[aria-current="page"]{color:#197fd8;background:#f0f6fd;}
+.bn-link.bn-parent-active{border-bottom-color:#197fd8;}
+@media screen and (max-width:991px){.bn-inner{padding:0 33px;}.bn-toggle{display:flex;}.bn-menu{display:none;flex-direction:column;align-items:flex-end;position:fixed;top:0;right:0;width:100%;max-width:320px;min-height:100vh;background:#fff;border-left:1px solid #0000001a;padding-top:120px;padding-left:25px;padding-right:40px;z-index:9998;}.bn-menu.bn-open{display:flex;}.bn-link{font-size:16px;line-height:30px;margin-right:0;margin-bottom:4px;text-align:right;width:100%;display:flex;justify-content:flex-end;}.bn-item{flex-direction:column;align-items:flex-end;margin-right:0;width:100%;}.bn-item>.bn-link{width:100%;justify-content:flex-end;margin-right:0;margin-bottom:0;}.bn-dropdown{display:none;position:static;transform:none;box-shadow:none;border:none;border-right:2px solid #e5e5e5;border-radius:0;padding:4px 0;margin-bottom:4px;width:100%;background:transparent;}.bn-item.bn-open>.bn-dropdown{display:block;}.bn-dropdown-link{font-size:15px;line-height:28px;padding:5px 16px;text-align:right;}}
+@media screen and (max-width:479px){.bn-inner{padding:0 15px;}}
+/* ── Front Story page styles ── */
+.fs-page { padding-top: 100px; padding-bottom: 80px; }
+.fs-wrap  { max-width: 1234px; margin: 0 auto; padding: 0 48px; }
+/* Bio grids inside fs-wrap use native .wrapper — remove its inner constraint */
+.fs-wrap .wrapper { max-width: none; padding: 0; }
+.fs-section { margin-bottom: 64px; }
+.fs-section-title {
+  font-family: Montserrat, sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #111;
+  margin: 0 0 24px;
+}
+.fs-heading {
+  font-family: Montserrat, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+  margin: 0 0 16px;
+}
+.fs-subheading {
+  font-family: Montserrat, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111;
+  margin: 0 0 12px;
+}
+.fs-body {
+  font-family: Montserrat, sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  color: #444;
+  margin: 0 0 20px;
+}
+.fs-img-full {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 32px 0;
+}
+.fs-img-pair {
+  display: flex;
+  gap: 24px;
+  margin: 32px 0;
+}
+.fs-img-pair img {
+  width: calc(50% - 12px);
+  height: auto;
+  display: block;
+}
+.fs-team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 32px 0;
+}
+.fs-team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(33.333% - 22px);
+}
+.fs-team-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+}
+.fs-team-name {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 4px;
+}
+.fs-team-title {
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+.fs-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 48px 0;
+}
+@media screen and (max-width: 767px) {
+  .fs-wrap { padding: 0 24px; }
+  .fs-section-title { font-size: 38px; }
+  .fs-heading { font-size: 26px; }
+  .fs-body { font-size: 18px; line-height: 28px; }
+  .fs-img-pair { flex-direction: column; }
+  .fs-img-pair img { width: 100%; }
+  .fs-team-card { width: calc(50% - 16px); }
+}
+@media screen and (max-width: 479px) {
+  .fs-wrap { padding: 0 16px; }
+  .fs-section-title { font-size: 28px; }
+  .fs-heading { font-size: 22px; }
+  .fs-body { font-size: 16px; line-height: 26px; }
+  .fs-team-card { width: 100%; }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var toggle=document.getElementById('bn-toggle');
+  var menu=document.getElementById('bn-menu');
+  if(!toggle||!menu)return;
+  toggle.addEventListener('click',function(){var open=menu.classList.toggle('bn-open');toggle.setAttribute('aria-expanded',open?'true':'false');});
+  menu.querySelectorAll('.bn-item>.bn-link').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var item=a.closest('.bn-item');
+      menu.querySelectorAll('.bn-item').forEach(function(i){if(i!==item)i.classList.remove('bn-open');});
+      item.classList.toggle('bn-open');
+    });
+  });
+  menu.querySelectorAll('a.bn-link:not(.bn-item>a),.bn-dropdown-link').forEach(function(a){
+    a.addEventListener('click',function(){
+      menu.classList.remove('bn-open');
+      toggle.setAttribute('aria-expanded','false');
+      menu.querySelectorAll('.bn-item').forEach(function(i){i.classList.remove('bn-open');});
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('#bn-menu')&&!e.target.closest('#bn-toggle')){
+      menu.querySelectorAll('.bn-item').forEach(function(i){i.classList.remove('bn-open');});
+    }
+  });
+});
+</script>
+</head><body>
+<header class="bn-bar">
+<div class="bn-inner">
+<a class="bn-logo" href="index.html">
+<img alt="JDB Entertainment Global" class="bn-logo-img" sizes="(max-width:479px) 24vw, (max-width:767px) 15vw, 100px" src="images/jdb_logo_text.png" srcset="images/jdb_logo_text-p-500.png 500w, images/jdb_logo_text-p-800.png 800w, images/jdb_logo_text.png 1209w"/>
+</a>
+<nav class="bn-menu" id="bn-menu" aria-label="Site navigation">
+  <a href="about-jdb.html" class="bn-link">ABOUT US</a>
+  <a href="team.html" class="bn-link">TEAM</a>
+  <div class="bn-item">
+    <a href="#" class="bn-link bn-parent-active" aria-haspopup="true">SONGSTER BUS <span class="bn-caret">&#9660;</span></a>
+    <div class="bn-dropdown">
+      <a href="front-story.html" class="bn-dropdown-link" aria-current="page">Front Story</a>
+      <a href="back-story.html" class="bn-dropdown-link">Back Story</a>
+    </div>
+  </div>
+  <a href="events.html" class="bn-link">EVENTS</a>
+  <a href="saluting-our-military.html" class="bn-link">Saluting Our Military</a>
+  <a href="hugs-for-healing.html" class="bn-link">Hugs for Healing</a>
+  <a href="anthem.html" class="bn-link">ANTHEM</a>
+  <a href="#contact" class="bn-link">CONTACT</a>
+</nav>
+<button aria-controls="bn-menu" aria-expanded="false" aria-label="Open navigation menu" class="bn-toggle" id="bn-toggle">
+<span class="bn-bar1"></span><span class="bn-bar2"></span><span class="bn-bar3"></span>
+</button>
+</div>
+</header>
+<div class="page-wrapper">
+<div class="fs-page">
+<div class="fs-wrap">
+<!-- Congressional Record -->
+<div class="fs-section">
+<h2 class="fs-heading" style="text-align:center;">JDB Entertainment Global is honored to collaborate with<br/>the Congressional Record on Capitol Hill</h2>
+<p class="fs-body" style="text-align:center;">This initiative showcases the musical talents of members of Congress</p>
+<div class="fs-img-pair">
+<img alt="Congressional Record" src="images/fs-image1.png"/>
+<img alt="Congressional Record" src="images/fs-image2.png"/>
+</div>
+</div>
+<hr class="fs-divider"/>
+<!-- Songster Bus -->
+<div class="fs-section">
+<h2 class="fs-heading" style="text-align:center;"><strong>JDB Entertainment Global proudly presents Songster Bus™ USA Goodwill Music Tour<br/>Coming in the summer of 2027!</strong></h2>
+<img alt="Songster Bus USA Goodwill Music Tour" class="fs-img-full" src="images/fs-image4.jpeg"/>
+<p class="fs-body">An international music platform where songs, artists, and storytelling come together to unite nations through shared creativity.</p>
+<p class="fs-body">At its core, Songster Bus™ is about creating music with meaning—building bridges, strengthening relationships, and proving that music remains a powerful force for global connection. With world-class talent and industry expertise, the tour produces original music designed for international reach and lasting impact.</p>
+<p class="fs-body">This unprecedented initiative blends cultural exchange with global goodwill, pairing talented artists from around the world with <strong>Grammy and award-winning mentors</strong> to create original music that reflects the spirit of collaboration across cultures.</p>
+</div>
+<hr class="fs-divider"/>
+<!-- Team -->
+<div class="fs-section" data-bio="1">
+<h2 class="fs-heading">JDB Entertainment Global Team</h2>
+</div><div class="wrapper" style="padding:0 48px;"><div class="w-row"><div class="w-col w-col-4"><a class="card w-inline-block" href="joan-betros.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/profile018.jpg" srcset="images/profile018.jpg 500w, images/profile018.jpg 700w"/><h3 class="heading-3">Joan Betros</h3><h3 class="teamtitles">CEO<br/>Executive Producer/Director<br/>JDB Entertainment Global<br/>Songster Bus™ USA Goodwill Music Tour</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="about.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/davenew.jpg" srcset="images/davenew-p-500.jpg 500w, images/davenew.jpg 700w"/><h3 class="heading-3">Dave Brooks</h3><h3 class="teamtitles">Celebrity Master Vocal Coach<br/>Executive Producer JDB Entertainment Global<br/>Songster Bus™ USA Goodwill Music Tour</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="dave-brooks.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/ron_biothumb.jpg"/><h3 class="heading-3">Ron Gunnell</h3><h3 class="teamtitles">International Executive Advisor<br/>Cultural Liaison<br/>Global Envoy</h3></a></div></div><div class="columns-2 w-row"><div class="w-col w-col-4"><a class="card w-inline-block" href="tim-davis.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/timdavisnew.jpg" srcset="images/timdavisnew-p-500.jpg 500w, images/timdavisnew.jpg 700w"/><h3 class="heading-3">Tim Davis</h3><h3 class="teamtitles">Music Director<br/>Executive Producer<br/>Mentor</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="stone-stafford.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/stone_biothumb.jpg"/><h3 class="heading-3">Stone Stafford</h3><h3 class="teamtitles">Executive Producer<br/>Mentor</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="antonio-sebato.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/as_jr.jpg" srcset="images/as_jr-p-500.jpg 500w, images/as_jr.jpg 700w"/><h3 class="heading-3">Antonio Sebato Jr.</h3><h3 class="teamtitles">Master of Ceremonies<br/>Guest Mentor</h3></a></div></div><div class="columns-2 w-row"><div class="w-col w-col-4"><a class="card w-inline-block" href="claudia-brant.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/claudia_biothumb.jpg"/><h3 class="heading-3">Claudia Brant</h3><h3 class="teamtitles">Executive Producer<br/>Mentor</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="troy-taylor.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/troytaylornew.jpg"/><h3 class="heading-3">Troy Taylor</h3><h3 class="teamtitles">Executive Producer<br/>Mentor</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="makeba-riddick-woods.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/mrw_biothumb.jpg"/><h3 class="heading-3">Makeba Riddick-Woods</h3><h3 class="teamtitles">Executive Producer<br/>Mentor</h3></a></div></div><div class="w-row"><div class="w-col w-col-4"><a class="card w-inline-block" href="jenny-mcphee.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/jenny_biothumb.jpg"/><h3 class="heading-3">Jenny McPhee</h3><h3 class="teamtitles">Executive Event<br/>Tour Director</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="scott-sumption.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/scottsumptionnew.jpg" srcset="images/scottsumptionnew-p-500.jpg 500w, images/scottsumptionnew.jpg 700w"/><h3 class="heading-3">Scott Sumption</h3><h3 class="teamtitles">Executive Producer<br/>Director</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="doug-lowe.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/doug_biothumb.jpg"/><h3 class="heading-3">Doug Lowe</h3><h3 class="teamtitles">Director of Film Production</h3></a></div></div><div class="w-row"><div class="w-col w-col-4"><a class="card w-inline-block" href="chance-thomas.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/chancethomasnew.jpg" srcset="images/chancethomasnew-p-500.jpg 500w, images/chancethomasnew.jpg 700w"/><h3 class="heading-3">Chance Thomas</h3><h3 class="teamtitles">Executive Producer<br/>Mentor</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="jenny-oaks-baker-bio.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/jennyoaksbakernew.jpg"/><h3 class="heading-3">Jenny Oaks Baker</h3><h3 class="teamtitles">Mentor and Performer</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="timothy-williams.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/timothywilliamsnew.jpg" srcset="images/timothywilliamsnew-p-500.jpg 500w, images/timothywilliamsnew.jpg 700w"/><h3 class="heading-3">Timothy Williams</h3><h3 class="teamtitles">Executive Producer<br/>Mentor</h3></a></div></div></div>
+<hr class="fs-divider"/>
+<!-- Additional images from doc -->
+<div class="fs-section">
+</div>
+<hr class="fs-divider"/>
+<!-- ANTHEM Foundation -->
+<div class="fs-section" data-bio="1">
+<h2 class="fs-heading">ANTHEM Foundation</h2>
+<p class="fs-body">A non-profit organization, in cooperation with JDB Entertainment Global, the ANTHEM Foundation supports cultural exchanges in the United States and among countries of the world to foster good will, create greater awareness and better understanding among people of different cultures and backgrounds, and to uplift and unify the human spirit.</p>
+</div><div class="wrapper" style="padding:0 48px;"><div class="intro section-intro"><h3 class="jdb-h3-international">ANTHEM Foundation President and Board of Directors</h3></div><div class="anthemboard w-row"><div class="w-col w-col-6"><a class="card w-inline-block" href="fareed-betros.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/fareed02.jpg" srcset="images/fareed02-p-500.jpg 500w, images/fareed02.jpg 700w"/><h3 class="heading-3">Colonel Fareed Betros</h3><h4 class="heading-9">ANTHEM Foundation President<br/>Board of Directors</h4></a></div><div class="w-col w-col-6"><a class="card w-inline-block" href="dave-brooks.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/ron_biothumb.jpg"/><h3 class="heading-3">Ron Gunnell</h3><h4>ANTHEM Board of Directors</h4></a></div></div><div class="intro section-intro"><h3 class="jdb-h3-international">Honorary ANTHEM Foundation Board Members</h3></div><div class="w-row"><div class="w-col w-col-4"><a class="card w-inline-block" href="claudia-brant.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/claudia_biothumb.jpg"/><h3 class="heading-3">Claudia Brant</h3><h3 class="teamtitles">Honorary Board Member</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="antonio-sebato.html"><img alt="" class="jdb-thumbnail" loading="lazy" src="images/as_jr.jpg"/><h3 class="heading-3">Antonio Sabato Jr.</h3><h3 class="teamtitles">Honorary Board Member</h3></a></div><div class="w-col w-col-4"><a class="card w-inline-block" href="donna-presley.html"><img alt="Donna Presley" class="jdb-thumbnail" loading="lazy" src="images/DonnaPresleyBioPhoto.jpg"/><h3 class="heading-3">Donna Presley</h3><h3 class="teamtitles">Honorary Board Member</h3></a></div></div></div>
+<hr class="fs-divider"/>
+<!-- Legacy -->
+<div class="fs-section">
+<h2 class="fs-heading">JDB Entertainment Global Legacy</h2>
+<p class="fs-body">The Songster Bus USA Goodwill Music Tour is a national and international goodwill music platform powered by purpose, story, and global connection. At its core it is more than a tour, it’s a new movement. The Songster Bus USA Goodwill Music Tour uses original music, artist development, and storytelling to connect cultures, elevate emerging talent, and create long-term international partnerships, while delivering high value to brands aligned with creativity, culture, and purpose. Building global cooperation, culture to culture, artist to artist, country to country, year after year.</p>
+</div>
+</div><!-- /fs-wrap -->
+</div><!-- /fs-page -->
+<div class="footer" id="contact"><div class="footer-block-wrapper"><div class="footer-block"><a class="logo-link-block w-inline-block" href="index.html"><img alt="" class="footer-logo" loading="lazy" sizes="110px" src="images/jdb_logo_text.png" srcset="images/jdb_logo_text-p-500.png 500w, images/jdb_logo_text-p-800.png 800w, images/jdb_logo_text.png 1209w" width="110"/></a><p class="paragraph-2">Email: <a class="link-2" href="mailto:jdbentertainmentglobal@gmail.com?subject=Contact%20Email">jdbentertainmentglobal@gmail.com</a></p></div><div class="footer-divider mobile-only"></div></div><div class="footer-divider second"></div><div class="footer-bottom"><div class="footer-block"><p class="footer-contact-text">Copyright ©2026. All Rights Reserved</p></div></div></div>
+</div><!-- /page-wrapper -->
+<script src="js/jquery.js?site=6222e4c942e0ed16332da855" type="text/javascript"></script>
+<script src="js/webflow.schunk.90690657670f5b00.js" type="text/javascript"></script>
+<script src="js/webflow.schunk.bcbb7674b2677c48.js" type="text/javascript"></script>
+<script src="js/webflow-script.js" type="text/javascript"></script>
+<script src="js/page-animate.js" type="text/javascript"></script>
+</body></html>
